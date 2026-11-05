@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#08070d">
+<meta name="description" content="Karma's handpicked watch universe for Harshita — films, series, K-dramas, C-dramas, Chinese cinema and anime, sorted by mood.">
+<title>Afterglow — Karma's Picks for Harshita</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="noise"></div><div class="cursor-glow" id="cursorGlow"></div>
+<div class="intro" id="intro">
+  <div class="intro-card glass">
+    <div class="micro">A PRIVATE LITTLE UNIVERSE · EST. WITH LOVE</div>
+    <div class="intro-heart">♡</div>
+    <p class="intro-kicker">for the nights you don't know what to watch</p>
+    <h1>Hey Harshita,</h1>
+    <p class="intro-copy">let's look into what you might wanna watch today based on Karma's picks for you.</p>
+    <p class="intro-sub">A thousand moods. A thousand stories. A little corner of the universe that's yours.</p>
+    <button class="button button-primary" id="enterButton">step inside <span>↗</span></button>
+    <div class="intro-foot">CURATED BY KARMA · FOR HARSHITA ONLY</div>
+  </div>
+</div>
+
+<header class="topbar glass">
+  <a class="wordmark" href="#home">AFTERGLOW<span>®</span><small>KARMA'S PICKS FOR HARSHITA</small></a>
+  <nav>
+    <a href="#moods">Moods</a><a href="#catalogue">Catalogue</a><a href="#rating-key">Rating key</a>
+  </nav>
+  <button class="icon-button" id="savedNav" title="Saved picks">♡ <span>Saved</span></button>
+</header>
+
+<main id="home">
+  <section class="hero shell">
+    <div class="hero-copy">
+      <div class="micro"><span class="live-dot"></span> YOUR NEXT OBSESSION IS SOMEWHERE HERE</div>
+      <h2>Pick a feeling.<br><em>Find a story.</em></h2>
+      <p>For the nights that need a comfort show, a devastating love story, a beautifully messed-up thriller, or an anime that stays in your head for days.</p>
+      <div class="hero-actions"><a class="button button-primary" href="#moods">find my mood <span>↓</span></a><a class="text-link" href="#catalogue">browse everything ↗</a></div>
+      <div class="hero-meta"><span>01 / FEEL SOMETHING</span><span>02 / PICK A TITLE</span><span>03 / PRESS PLAY</span></div>
+    </div>
+    <div class="hero-art glass">
+      <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+      <div class="art-core">AFTER<br><i>GLOW</i><span>♡</span></div>
+      <div class="art-label label-top">A STORY FOR EVERY VERSION OF YOU</div>
+      <div class="art-label label-bottom">SCROLL TO GET LOST ✳</div>
+      <span class="star star-a">✳</span><span class="star star-b">✧</span><span class="star star-c">✦</span>
+    </div>
+  </section>
+
+  <section class="shell section-block" id="moods">
+    <div class="section-head"><div><div class="micro">01 — THE FEELING FIRST</div><h2>What's the <em>mood?</em></h2><p>Don't overthink it. Just tap what feels right.</p></div><button class="quiet-button" id="clearMood">RESET FILTER ×</button></div>
+    <div class="mood-grid" id="moodGrid"></div>
+  </section>
+
+  <section class="shell section-block" id="catalogue">
+    <div class="section-head catalogue-head"><div><div class="micro">02 — THE WHOLE UNIVERSE</div><h2>The <em>catalogue.</em></h2><p>Search the shelves, switch worlds, save the ones that feel like you.</p></div><div class="catalogue-count"><b id="visibleCount">0</b><span>VISIBLE PICKS</span></div></div>
+    <div class="category-tabs" id="categoryTabs">
+      <button class="category-tab active" data-category="all">Everything <small>all</small></button>
+      <button class="category-tab" data-category="movies">Movies <small>01</small></button>
+      <button class="category-tab" data-category="shows">TV shows <small>02</small></button>
+      <button class="category-tab" data-category="kdrama">K-drama <small>03</small></button>
+      <button class="category-tab" data-category="cdrama">Chinese drama <small>04</small></button>
+      <button class="category-tab" data-category="chinesemovies">Chinese movies <small>05</small></button>
+      <button class="category-tab" data-category="anime">Anime <small>06</small></button>
+    </div>
+    <div class="library-targets" id="libraryTargets">
+      <div class="target-note"><span>01</span><div><b>Movies</b><small>Target library: 1,000 titles</small></div><strong>1,000+</strong></div>
+      <div class="target-note"><span>02</span><div><b>TV shows</b><small>Target library: 1,000 titles</small></div><strong>1,000+</strong></div>
+      <div class="target-note"><span>03</span><div><b>Korean dramas</b><small>Target library: 1,000 titles</small></div><strong>1,000+</strong></div>
+      <div class="target-note"><span>04</span><div><b>Chinese dramas</b><small>Target library: 1,000 titles</small></div><strong>1,000+</strong></div>
+      <div class="target-note"><span>05</span><div><b>Chinese movies</b><small>Target library: 1,000 titles</small></div><strong>1,000+</strong></div>
+      <div class="target-note"><span>06</span><div><b>Anime</b><small>Target library: 1,000 titles</small></div><strong>1,000+</strong></div>
+    </div>
+    <div class="filters">
+      <label class="searchbox"><span>⌕</span><input id="searchInput" type="search" placeholder="Search title, genre, synopsis or mood…"></label>
+      <select id="genreFilter"><option value="">All genres</option></select>
+      <select id="sortFilter"><option value="recommended">Karma's order</option><option value="rating">Highest rated</option><option value="newest">Newest first</option><option value="az">A — Z</option></select>
+      <button class="quiet-button" id="savedOnly">♡ SAVED ONLY</button>
+    </div>
+    <div class="api-status" id="apiStatus"><span class="status-dot"></span><span>Showing Karma's starter picks. Choose a shelf to load its live catalogue.</span></div>
+    <div class="card-grid" id="cardGrid" aria-live="polite"></div>
+    <div class="load-row"><button class="button button-secondary" id="loadMore" hidden>load next batch <span>↓</span></button><p id="loadNote">Your next favourite is probably in here.</p></div>
+  </section>
+
+  <section class="shell section-block rating-section" id="rating-key">
+    <div class="micro">03 — THE OFFICIAL KARMA SCALE</div><h2>Not stars.<br><em>Kelaaa's.</em></h2>
+    <p class="rating-intro">A very serious rating system for very unserious levels of cinema obsession. These are Karma's personal picks — not IMDb or critic scores. Live-library titles can be rated and saved by you.</p>
+    <div class="rating-grid">
+      <div class="rating-tile"><span>★☆☆☆☆</span><b>Kelaaa</b><small>1 / 5 · not the one</small></div>
+      <div class="rating-tile"><span>★★☆☆☆</span><b>Mojaa Kelaa</b><small>2 / 5 · has its moments</small></div>
+      <div class="rating-tile"><span>★★★☆☆</span><b>Oh Kelaaa Zeng</b><small>3 / 5 · decent watch</small></div>
+      <div class="rating-tile"><span>★★★★☆</span><b>Bhai kisu maaaaal</b><small>4 / 5 · proper good</small></div>
+      <div class="rating-tile peak"><span>★★★★★</span><b>Peaak Bostu</b><small>5 / 5 · top-tier, trust me</small></div>
+    </div>
+  </section>
+</main>
+<footer class="footer"><span>AFTERGLOW®</span><p>made with an unreasonable amount of love.</p><small>FOR HARSHITA, FROM KARMA · KEEP THE POPCORN CLOSE ♡</small></footer>
+<script src="/app.js" defer></script>
+</body></html>
